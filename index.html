@@ -52,6 +52,7 @@ nav ul li a:hover{
 text-decoration:underline;
 }
 
+/* HERO */
 .hero{
 height:85vh;
 background:linear-gradient(120deg,#ff4d8d,#7a5cff,#4dabf7);
@@ -72,6 +73,22 @@ margin-bottom:10px;
 .hero p{
 font-size:20px;
 max-width:700px;
+}
+
+/* SOS BUTTON */
+.sos-btn{
+margin-top:20px;
+padding:12px 25px;
+background:red;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:18px;
+}
+
+.sos-btn:hover{
+background:darkred;
 }
 
 section{
@@ -98,6 +115,7 @@ border-radius:10px;
 width:260px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
 text-align:center;
+cursor:pointer;
 }
 
 .card h3{
@@ -122,15 +140,6 @@ box-shadow:0 5px 15px rgba(0,0,0,0.1);
 
 .number h3{
 color:#ff4d8d;
-}
-
-.form-container{
-max-width:800px;
-margin:auto;
-background:white;
-padding:30px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
 footer{
@@ -173,6 +182,7 @@ justify-content:center;
 <li><a href="tips.html">Safety Tips</a></li>
 <li><a href="police.html">Police Map</a></li>
 <li><a href="ICC.html">ICC</a></li>
+<li><a href="complaint.html">Complaint</a></li>
 
 </ul>
 </nav>
@@ -187,6 +197,11 @@ justify-content:center;
 <p>A digital platform for women safety, support and empowerment.  
 Access emergency help, share your voice and stay protected.</p>
 
+<!-- ✅ SOS BUTTON ADDED -->
+<button class="sos-btn" onclick="location.href='sos.html'">
+🚨 SOS Emergency
+</button>
+
 </section>
 
 
@@ -196,24 +211,24 @@ Access emergency help, share your voice and stay protected.</p>
 
 <div class="cards">
 
-<div class="card">
+<div class="card" onclick="location.href='sos.html'">
 <h3>🚨 SOS Alert</h3>
 <p>Quick emergency alert feature for immediate help.</p>
 </div>
 
-<div class="card">
+<div class="card" onclick="location.href='laws.html'">
 <h3>📚 Women Laws</h3>
 <p>Learn legal rights and protection laws for women.</p>
 </div>
 
-<div class="card">
+<div class="card" onclick="location.href='helpline.html'">
 <h3>📞 Helpline</h3>
 <p>Important emergency numbers available instantly.</p>
 </div>
 
-<div class="card">
-<h3>💬 HerVoice</h3>
-<p>Share experiences and get community support.</p>
+<div class="card" onclick="location.href='complaint.html'">
+<h3>💬 Complaint</h3>
+<p>Report issues safely and securely.</p>
 </div>
 
 </div>
@@ -249,23 +264,7 @@ Access emergency help, share your voice and stay protected.</p>
 </section>
 
 
-<section>
-
-<h2>Report a Problem</h2>
-
-<div class="form-container">
-
-<iframe
-src="https://docs.google.com/forms/d/e/1FAIpQLSfOXiokYuo-wyyr7SLG3GT4nx91ce1hZZkU2mjPckvs-OjJPQ/viewform?embedded=true"
-width="100%"
-height="950"
-frameborder="0">
-Loading…
-</iframe>
-
-</div>
-
-</section>
+<!-- ❌ REMOVED COMPLAINT FORM FROM HOMEPAGE -->
 
 
 <footer>
