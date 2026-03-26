@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SafeHer | Helpline</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f6fb;
+    color:#333;
+}
+
+header{
+    background:linear-gradient(90deg,#ff4d8d,#7a5cff);
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:white;
+}
+
+.logo{
+    font-size:26px;
+    font-weight:700;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+}
+
+nav ul li a:hover{
+    text-decoration:underline;
+}
+
+/* Page Title */
+.page-title{
+    text-align:center;
+    padding:40px 20px;
+}
+
+.page-title h1{
+    font-size:40px;
+    color:#7a5cff;
+}
+
+/* Helpline Cards */
+.helpline-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+    padding:40px 10%;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    width:250px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h2{
+    color:#ff4d8d;
+    margin-bottom:10px;
+}
+
+.card p{
+    margin-bottom:10px;
+}
+
+.call-btn{
+    display:inline-block;
+    padding:8px 15px;
+    background:#7a5cff;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.call-btn:hover{
+    background:#ff4d8d;
+}
+
+/* Footer */
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .page-title h1{
+        font-size:28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">SafeHer</div>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="sos.html">SOS</a></li>
+<li><a href="laws.html">Laws</a></li>
+<li><a href="helpline.html">Helpline</a></li>
+<li><a href="tips.html">Safety Tips</a></li>
+<li><a href="police.html">Police Map</a></li>
+</ul>
+</nav>
+</header>
+
+<!-- Title -->
+<div class="page-title">
+<h1>Emergency Helpline Numbers</h1>
+<p>Quick access to important emergency services</p>
+</div>
+
+<!-- Helpline Section -->
+<div class="helpline-container">
+
+<div class="card">
+<h2>181</h2>
+<p>Women Helpline</p>
+<a href="tel:181" class="call-btn">Call Now</a>
+</div>
+
+<div class="card">
+<h2>1091</h2>
+<p>Women Police</p>
+<a href="tel:1091" class="call-btn">Call Now</a>
+</div>
+
+<div class="card">
+<h2>112</h2>
+<p>Emergency Number</p>
+<a href="tel:112" class="call-btn">Call Now</a>
+</div>
+
+<div class="card">
+<h2>1098</h2>
+<p>Child Helpline</p>
+<a href="tel:1098" class="call-btn">Call Now</a>
+</div>
+
+<div class="card">
+<h2>100</h2>
+<p>Police Control Room</p>
+<a href="tel:100" class="call-btn">Call Now</a>
+</div>
+
+<div class="card">
+<h2>108</h2>
+<p>Ambulance Service</p>
+<a href="tel:108" class="call-btn">Call Now</a>
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 SafeHer | Women Safety Platform</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SafeHer SOS Emergency</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:linear-gradient(120deg,#ff4d8d,#7a5cff);
+color:white;
+text-align:center;
+padding:40px;
+}
+
+.container{
+background:white;
+color:#333;
+padding:40px;
+border-radius:12px;
+max-width:600px;
+margin:auto;
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+h1{
+color:#ff4d8d;
+}
+
+.sos-btn{
+background:red;
+color:white;
+border:none;
+padding:20px 40px;
+font-size:22px;
+border-radius:50px;
+cursor:pointer;
+margin:20px;
+}
+
+.sos-btn:hover{
+background:#cc0000;
+}
+
+.whatsapp-btn{
+background:#25D366;
+color:white;
+border:none;
+padding:15px 25px;
+font-size:16px;
+border-radius:30px;
+cursor:pointer;
+margin:10px;
+}
+
+.call-btn{
+background:#007bff;
+color:white;
+border:none;
+padding:15px 25px;
+font-size:16px;
+border-radius:30px;
+cursor:pointer;
+margin:10px;
+}
+
+.map-link{
+margin-top:20px;
+font-weight:bold;
+}
+
+a{
+text-decoration:none;
+}
+
+.home{
+display:block;
+margin-top:30px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🚨 Emergency SOS</h1>
+
+<p>Press the SOS button to send your location and alert for help.</p>
+
+<button class="sos-btn" onclick="sendSOS()">SEND SOS</button>
+
+<p id="location"></p>
+
+<p id="map"></p>
+
+<button class="whatsapp-btn" onclick="sendWhatsApp()">Send WhatsApp Alert</button>
+
+<br>
+
+<a href="tel:112">
+<button class="call-btn">Call Emergency 112</button>
+</a>
+
+<a href="tel:1091">
+<button class="call-btn">Call Women Police 1091</button>
+</a>
+
+<a href="tel:181">
+<button class="call-btn">Women Helpline 181</button>
+</a>
+
+<a href="index.html" class="home">⬅ Back to Home</a>
+
+</div>
+
+<script>
+
+let latitude;
+let longitude;
+let mapLink="";
+
+function sendSOS(){
+
+if(navigator.geolocation){
+
+navigator.geolocation.getCurrentPosition(function(position){
+
+latitude = position.coords.latitude;
+longitude = position.coords.longitude;
+
+mapLink="https://maps.google.com/?q="+latitude+","+longitude;
+
+document.getElementById("location").innerHTML =
+"📍 Latitude: "+latitude+"<br>Longitude: "+longitude;
+
+document.getElementById("map").innerHTML =
+"<a href='"+mapLink+"' target='_blank'>Open Location in Google Maps</a>";
+
+alert("SOS Activated! Location captured.");
+
+});
+
+}else{
+
+alert("Geolocation not supported");
+
+}
+
+}
+
+function sendWhatsApp(){
+
+if(mapLink==""){
+alert("Press SOS first to get location");
+return;
+}
+
+let message="🚨 EMERGENCY! I need help. My location: "+mapLink;
+
+let url="https://wa.me/?text="+encodeURIComponent(message);
+
+window.open(url,'_blank');
+
+}
+
+</script>
+
+</body>
+</html>
